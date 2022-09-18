@@ -1,5 +1,6 @@
 .header {
    display: flex;
+   gap: 30px;
    justify-content: space-between;
    background-color: #f0ffff;
    border-radius: 5px;
@@ -7,5 +8,15 @@
    align-items: center;
    h1 {
       padding: 0 0 0 20px;
+      @media (max-width: 480px) {
+         width: min-content;
+         text-align: center;
+         font-size: 1.7rem;
+         word-wrap: break-word;
+      }
+   }
+   @media (max-width: 480px) {
+      justify-content: flex-start;
+      font-size: 1rem;
    }
 }
