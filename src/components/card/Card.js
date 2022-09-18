@@ -3,13 +3,13 @@ import s from './Card.module.scss';
 
 function Card(props) {
 
-   let { url, id, name, shuffleCards } = props
+   const { card, shuffleCards } = props
 
 
    return (
-      <div className={s.card} key={id} onClick={shuffleCards}>
-         <img src={url} alt={name} />
-         <p>{name}</p>
+      <div className={s.card} onClick={shuffleCards}>
+         <img src={card.url} alt={card.name} />
+         <p>{card.name}</p>
       </div>
    );
 }

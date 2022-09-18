@@ -11,13 +11,11 @@ import phoenix from './img/Phoenix.png'
 import dk from './img/DK.png'
 import morph from './img/Morphling.png'
 
-
 function App() {
 
-   const [cards, setCards] = useState(cardsData)
+   const [cards, setCards] = useState([])
    const [currentScore, setCurrentScore] = useState(0)
    const [bestResult, setBestResult] = useState(0)
-
 
    function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -26,9 +24,15 @@ function App() {
       }
       return array
    }
+   useEffect(() => {
+      setCards(cardsData)
+   }, [])
 
-   const shuffleCards = () => {
-      setCards(shuffle(cards))
+   const shuffleCards = (id) => {
+      console.log(id)
+      setCards(shuffle(cards));
+      setCurrentScore(currentScore + 1)
+
    }
 
    return (
