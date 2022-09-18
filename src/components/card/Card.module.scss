@@ -8,4 +8,8 @@
    p {
       padding: 10px 0;
    }
+   &:hover {
+      cursor: pointer;
+      background-color: #d9e9ff;
+   }
 }
