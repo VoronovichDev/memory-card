@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.2e2689b7.css",
+    "main.js": "/memory-card/static/js/main.b7a1d809.js",
+    "static/media/Arc.png": "/memory-card/static/media/Arc.bd98edfd6610d3bb38d8.png",
+    "static/media/Morphling.png": "/memory-card/static/media/Morphling.62a3212222c7d0a44177.png",
+    "static/media/DK.png": "/memory-card/static/media/DK.c2c99cc3fb545ce6df27.png",
+    "static/media/Centaur.png": "/memory-card/static/media/Centaur.273e6aca43b50b22ba9b.png",
+    "static/media/Juggernaut.png": "/memory-card/static/media/Juggernaut.63f13fb73a56b22f2157.png",
+    "static/media/Viper.png": "/memory-card/static/media/Viper.a4b6251e41ee7f337afc.png",
+    "static/media/Phoenix.png": "/memory-card/static/media/Phoenix.ec17b01b5fb2e7c874a6.png",
+    "static/media/Axe.png": "/memory-card/static/media/Axe.75aca183cb448b30d9eb.png",
+    "static/media/Windranger.png": "/memory-card/static/media/Windranger.8a3d83501dee64fdc85b.png",
+    "index.html": "/memory-card/index.html",
+    "main.2e2689b7.css.map": "/memory-card/static/css/main.2e2689b7.css.map",
+    "main.b7a1d809.js.map": "/memory-card/static/js/main.b7a1d809.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e2689b7.css",
+    "static/js/main.b7a1d809.js"
+  ]
+}
