@@ -10,12 +10,15 @@ import cent from './img/Centaur.png'
 import phoenix from './img/Phoenix.png'
 import dk from './img/DK.png'
 import morph from './img/Morphling.png'
+import jugger from './img/Juggernaut.png'
+import invoker from './img/Invoker.png'
 
 function App() {
 
    const [cards, setCards] = useState([])
    const [currentScore, setCurrentScore] = useState(0)
    const [bestResult, setBestResult] = useState(0)
+   const [clickedCards, setClickedCards] = useState([])
 
    function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -24,15 +27,25 @@ function App() {
       }
       return array
    }
+
    useEffect(() => {
       setCards(cardsData)
    }, [])
 
-   const shuffleCards = (id) => {
-      console.log(id)
-      setCards(shuffle(cards));
-      setCurrentScore(currentScore + 1)
+   useEffect(() => {
+      currentScore >= bestResult ? setBestResult(currentScore) : setBestResult(bestResult)
+   }, [currentScore])
 
+   const shuffleCards = (id) => {
+      setCards(shuffle(cards));
+      if (clickedCards.find((el) => el === id)) {
+         setCurrentScore(0)
+         setClickedCards([])
+         return
+      } else {
+         setClickedCards([...clickedCards, id]);
+         setCurrentScore(currentScore + 1)
+      }
    }
 
    return (
@@ -56,6 +69,8 @@ const cardsData = [
    { name: "Phoenix", url: phoenix, id: 6 },
    { name: "Dragon Knight", url: dk, id: 7 },
    { name: "Morphling", url: morph, id: 8 },
+   { name: "Juggernaut", url: jugger, id: 9 },
+   { name: "Invoker", url: invoker, id: 10 },
 ]
 
 export default App;

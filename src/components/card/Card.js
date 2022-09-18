@@ -7,7 +7,7 @@ function Card(props) {
 
 
    return (
-      <div className={s.card} onClick={shuffleCards}>
+      <div className={s.card} onClick={() => shuffleCards(card.id)}>
          <img src={card.url} alt={card.name} />
          <p>{card.name}</p>
       </div>
